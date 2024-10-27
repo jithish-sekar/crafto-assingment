@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import CardComponent from "./CardComponent";
 import Pagination from "./Pagination";
 
@@ -51,16 +52,19 @@ const GetAllQuote = () => {
   return (
     <>
       <div className="relative flex justify-center">
-        <button className="flex items-center absolute right-20 max-sm:right-3 bottom-0 gap-2 py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+        <Link to="/create-new-quote">
           {" "}
-          Create New{" "}
-          <img
-            width="30"
-            height="30"
-            src="https://img.icons8.com/ios-filled/50/FFFFFF/add--v1.png"
-            alt="add--v1"
-          />
-        </button>
+          <button className="flex items-center absolute right-20 max-sm:right-3 bottom-0 gap-2 py-3 px-4 text-sm tracking-wide rounded-lg text-white bg-blue-600 hover:bg-blue-700 focus:outline-none">
+            {" "}
+            Create New{" "}
+            <img
+              width="30"
+              height="30"
+              src="https://img.icons8.com/ios-filled/50/FFFFFF/add--v1.png"
+              alt="add--v1"
+            />
+          </button>
+        </Link>
       </div>
       <h3 className="text-center text-4xl mt-20">Getting all Quotes</h3>
 
